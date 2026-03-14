@@ -77,9 +77,10 @@ overflow:hidden;
 margin:15px 0;
 }
 
-.video iframe{
+.video video{
 width:100%;
 height:100%;
+object-fit:cover;
 }
 
 .card{
