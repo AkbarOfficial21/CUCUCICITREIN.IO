@@ -26,7 +26,6 @@ const pesanInput=document.getElementById("pesanInput");
 const list=document.getElementById("listUcapan");
 const audio=document.getElementById("audio");
 
-
 function cekKata(text){
 
 let lower=text.toLowerCase();
@@ -42,7 +41,6 @@ return w;
 return null;
 
 }
-
 
 bukaBtn.onclick=()=>{
 
@@ -71,7 +69,6 @@ loadUcapan();
 
 };
 
-
 kirimBtn.onclick=async()=>{
 
 let pesan=pesanInput.value.trim();
@@ -99,7 +96,7 @@ if(localStorage.getItem("thr")){
 
 Swal.fire({
 icon:"info",
-title:"THR\nSudah diklaim",
+title:"THR Sudah Diklaim"
 });
 
 return;
@@ -121,7 +118,6 @@ loadUcapan();
 showTHR();
 
 };
-
 
 async function loadUcapan(){
 
@@ -149,7 +145,6 @@ list.innerHTML+=`
 
 }
 
-
 function showTHR(){
 
 Swal.fire({
@@ -167,11 +162,19 @@ popup:"small-popup"
 
 setTimeout(()=>{
 
-new QRCode(document.getElementById("qr"),{
-text:"THR-IDUL-FITRI",
+let qrBox=document.getElementById("qr");
+
+new QRCode(qrBox,{
+text:`https://akbar.id/?from=${currentNama}`,
 width:160,
 height:160
 });
+
+qrBox.style.cursor="pointer";
+
+qrBox.onclick=()=>{
+window.open(`https://akbar.id/?from=${currentNama}`,"_blank");
+};
 
 },200);
 
