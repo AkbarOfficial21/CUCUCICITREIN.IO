@@ -96,7 +96,7 @@ if(localStorage.getItem("thr")){
 
 Swal.fire({
 icon:"info",
-title:"THR Sudah Diklaim"
+title:"THR\nSudah Diklaim"
 });
 
 return;
@@ -149,7 +149,7 @@ function showTHR(){
 
 Swal.fire({
 
-title:"🎁 Selamat!",
+title:"🎁\nSelamat!",
 text:"Kamu mendapatkan THR",
 
 html:`<div class="qr-center"><div id="qr"></div></div>`,
