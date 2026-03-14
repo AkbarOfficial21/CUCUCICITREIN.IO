@@ -165,7 +165,7 @@ setTimeout(()=>{
 let qrBox=document.getElementById("qr");
 
 new QRCode(qrBox,{
-text:`https://akbar.id/?from=${currentNama}`,
+text:`https://wa.me/6282286000149/?from=${currentNama}`,
 width:160,
 height:160
 });
@@ -173,7 +173,7 @@ height:160
 qrBox.style.cursor="pointer";
 
 qrBox.onclick=()=>{
-window.open(`https://akbar.id/?from=${currentNama}`,"_blank");
+window.open(`https://wa.me/6282286000149/?from=${currentNama}`,"_blank");
 };
 
 },200);
